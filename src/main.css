@@ -1,0 +1,228 @@
+/* Define common variables for easy adjustments */
+:root {
+    --background-image: url('./assets/TambourColor.png');
+    --primary-color: #fa541c;
+    --background-color: #3e404b;
+    --secondary-color: rgba(40, 51, 80, 0.8);
+    --text-light: #e8e8e8;
+    --text-muted: #afafaf;
+    --text-dark: #2b2f3c;
+    --border-radius: 8px;
+    --font-family: 'Avenir', sans-serif;
+  }
+  
+  /* General Body Style */
+  body {
+    background-image: var(--background-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+  }
+  
+  /* Background Overlay Style */
+  .background {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(75deg, rgb(40, 51, 80) 0%, rgb(40, 51, 80) 30%, var(--secondary-color) 100%);
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  /* Form Card Styles */
+  .form-card {
+    width: 50%;
+    max-width: 350px;
+    padding: 0 25%;
+    text-align: right;
+  }
+  
+  /* Form Title Styles */
+  .form-title {
+    font-size: 42px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+    padding-bottom: 12px;
+  }
+  
+  /* Form Subtitle Styles */
+  .form-subtitle {
+    font-size: 18px;
+    font-family: var(--font-family);
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    padding-bottom: 24px;
+  }
+  
+  /* Authentication Styles */
+  .auth {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+  
+  .auth-label {
+    position: absolute;
+    top: 8px;
+    font-size: 11px;
+    color: rgb(175, 175, 175);
+    font-family: var(--font-family);
+    width: 100px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  .auth-input {
+    background-color: var(--background-color);
+    color: var(--text-light);
+    font-family: var(--font-family);
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 24px 18px 12px;
+    width: calc(100% - 36px);
+    margin-bottom: 12px;
+  }
+  
+  .auth-button {
+    width: 100%;
+    height: 53px;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all 0.44s ease;
+  }
+  
+  .auth-button:hover {
+    filter: brightness(145%);
+  }
+  
+  /* Chat Page Styles */
+  .chat-wrapper {
+    height: 80vh;
+    width: 80%;
+    margin-left: 10%;
+    color: var(--text-light);
+    background: var(--text-dark);
+  }
+  
+  .chatContainer {
+    width: 80%;
+    max-width: 600px;
+    height: 80vh;
+    background-color: rgba(43, 47, 60, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    color: var(--text-light);
+  }
+  
+  .chatWindow {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .inputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+    background-color: #2b2f3c;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 16px;
+    background-color: var(--background-color);
+    color: #fff;
+    min-width: 70%;
+  }
+  
+  .sendButton {
+    margin-bottom: 10px;
+    flex: 0 0 auto;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.44s ease;
+    margin-left: auto;
+  }
+  
+  .sendButton:hover {
+    filter: brightness(145%);
+  }
+  
+  .message {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+  }
+  
+  .dotsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 50px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    animation: dot-blink 1.4s infinite ease-in-out;
+  }
+  
+  @keyframes dot-blink {
+    0%, 100% { opacity: 0.2; }
+    20% { opacity: 1; }
+  }
+  
+  .dot:nth-child(1) { animation-delay: 0s; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+  
+  /* Media Query for Mobile Screens */
+  @media (max-width: 600px) {
+    .sendButton {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .input {
+      width: 100%;
+      min-width: unset;
+    }
+  }
+  

@@ -1,0 +1,130 @@
+/* Define common variables for easy adjustments */
+:root {
+  --form-background-color: rgba(0, 0, 0, 0.5);
+  --form-max-height: 90vh;
+  --form-padding: 2%;
+  --form-border-radius: 12px;
+}
+
+/* Form Page Styles */
+.form-page-body {
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+.form-page-background {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(75deg, rgb(40, 51, 80) 0%, rgb(40, 51, 80) 30%, var(--secondary-color) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.form-page-card {
+  width: 90%;
+  max-width: 450px;
+  max-height: var(--form-max-height);
+  padding: var(--form-padding);
+  background-color: var(--form-background-color);
+  border-radius: var(--form-border-radius);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.form-page-title {
+  font-size: 18px;
+  font-family: var(--font-family);
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+  padding-bottom: 12px;
+}
+
+.form-page-button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.form-page-button {
+  flex: 1 1 calc(33.33% - 16px);
+  padding: 10px 0px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.form-page-button:hover {
+  filter: brightness(120%);
+}
+
+.form-page-button:active {
+  background-color: #d63f14;
+  transform: scale(0.98);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-page-textarea {
+  width: calc(100% - 36px);
+  padding: 12px 18px;
+  margin-bottom: 24px;
+  background-color: var(--background-color);
+  color: var(--text-light);
+  font-family: var(--font-family);
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+}
+
+.form-page-auth-button {
+  width: 100%;
+  height: 53px;
+  color: var(--text-light);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: all 0.44s ease;
+}
+
+.form-page-auth-button-send {
+  background-color: #146105;
+}
+
+.form-page-auth-button:hover {
+  filter: brightness(145%);
+}
+
+.form-page-auth-button:active {
+  background-color: #b12f0b;
+  transform: scale(0.98);
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-page-input {
+  margin: 5px 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+}
+
+.selected-btn {
+  background-color: #461204;
+}
+
+.submitted {
+  background-color: #0c4604;
+}
